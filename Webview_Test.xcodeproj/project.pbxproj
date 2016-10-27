@@ -14,6 +14,8 @@
 		386FDDE01DC0E24300ED598E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 386FDDDE1DC0E24300ED598E /* LaunchScreen.storyboard */; };
 		386FDDEB1DC0E24300ED598E /* Webview_TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386FDDEA1DC0E24300ED598E /* Webview_TestTests.swift */; };
 		386FDDF61DC0E24300ED598E /* Webview_TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386FDDF51DC0E24300ED598E /* Webview_TestUITests.swift */; };
+		38831BEC1DC21B5F0098C8CA /* swifter-stable in Frameworks */ = {isa = PBXBuildFile; fileRef = 38831BEB1DC21B5F0098C8CA /* swifter-stable */; };
+		98151BF2528731556693C38C /* Pods_Webview_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B73743EBF2B51D905384ACB /* Pods_Webview_Test.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1BBDF0C8689D096CE6E01E5C /* Pods-Webview_Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Webview_Test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Webview_Test/Pods-Webview_Test.debug.xcconfig"; sourceTree = "<group>"; };
+		2B73743EBF2B51D905384ACB /* Pods_Webview_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Webview_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		386FDDD21DC0E24300ED598E /* Webview_Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Webview_Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		386FDDD51DC0E24300ED598E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		386FDDD71DC0E24300ED598E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +51,8 @@
 		386FDDF11DC0E24300ED598E /* Webview_TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Webview_TestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		386FDDF51DC0E24300ED598E /* Webview_TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webview_TestUITests.swift; sourceTree = "<group>"; };
 		386FDDF71DC0E24300ED598E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38831BEB1DC21B5F0098C8CA /* swifter-stable */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "swifter-stable"; sourceTree = "<group>"; };
+		8962FDE5FCF4C974C8FAB041 /* Pods-Webview_Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Webview_Test.release.xcconfig"; path = "Pods/Target Support Files/Pods-Webview_Test/Pods-Webview_Test.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38831BEC1DC21B5F0098C8CA /* swifter-stable in Frameworks */,
+				98151BF2528731556693C38C /* Pods_Webview_Test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,10 +85,13 @@
 		386FDDC91DC0E24300ED598E = {
 			isa = PBXGroup;
 			children = (
+				38831BEB1DC21B5F0098C8CA /* swifter-stable */,
 				386FDDD41DC0E24300ED598E /* Webview_Test */,
 				386FDDE91DC0E24300ED598E /* Webview_TestTests */,
 				386FDDF41DC0E24300ED598E /* Webview_TestUITests */,
 				386FDDD31DC0E24300ED598E /* Products */,
+				E0629D02EDBDA7054DADA736 /* Pods */,
+				598CCB7B616E2ABEBF5957CE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +136,23 @@
 			path = Webview_TestUITests;
 			sourceTree = "<group>";
 		};
+		598CCB7B616E2ABEBF5957CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B73743EBF2B51D905384ACB /* Pods_Webview_Test.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E0629D02EDBDA7054DADA736 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1BBDF0C8689D096CE6E01E5C /* Pods-Webview_Test.debug.xcconfig */,
+				8962FDE5FCF4C974C8FAB041 /* Pods-Webview_Test.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +160,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 386FDDFA1DC0E24300ED598E /* Build configuration list for PBXNativeTarget "Webview_Test" */;
 			buildPhases = (
+				64FA03B88F60717D3F315EEA /* [CP] Check Pods Manifest.lock */,
 				386FDDCE1DC0E24300ED598E /* Sources */,
 				386FDDCF1DC0E24300ED598E /* Frameworks */,
 				386FDDD01DC0E24300ED598E /* Resources */,
+				A93311F2A3D128F307BABE80 /* [CP] Embed Pods Frameworks */,
+				9D506A253502A85D82DB064E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,6 +281,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		64FA03B88F60717D3F315EEA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9D506A253502A85D82DB064E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Webview_Test/Pods-Webview_Test-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A93311F2A3D128F307BABE80 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Webview_Test/Pods-Webview_Test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		386FDDCE1DC0E24300ED598E /* Sources */ = {
@@ -397,6 +476,7 @@
 		};
 		386FDDFB1DC0E24300ED598E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BBDF0C8689D096CE6E01E5C /* Pods-Webview_Test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Webview_Test/Info.plist;
@@ -408,6 +488,7 @@
 		};
 		386FDDFC1DC0E24300ED598E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8962FDE5FCF4C974C8FAB041 /* Pods-Webview_Test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Webview_Test/Info.plist;
@@ -484,6 +565,7 @@
 				386FDDFC1DC0E24300ED598E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		386FDDFD1DC0E24300ED598E /* Build configuration list for PBXNativeTarget "Webview_TestTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +574,7 @@
 				386FDDFF1DC0E24300ED598E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		386FDE001DC0E24300ED598E /* Build configuration list for PBXNativeTarget "Webview_TestUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +583,7 @@
 				386FDE021DC0E24300ED598E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
