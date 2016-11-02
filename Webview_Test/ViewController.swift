@@ -20,10 +20,15 @@ class ViewController: UIViewController {
         
         print("displaying a basic WebView")
         
+        print("Home directory  \(NSBundle.mainBundle().resourcePath!)")
+        
         var html: String
         html = "<br /><h2>WebView Hello World</h2>"
         //load html directly as a string
-        axonWebView.loadHTMLString(html, baseURL: nil)
+        //axonWebView.loadHTMLString(html, baseURL: nil)
+        
+        let urlDummySensor: NSURL = NSURL(fileURLWithPath: "http://http://localhost:8080/nervousnet-api/raw-sensor-data/:sensor")
+        axonWebView.loadRequest(NSURLRequest(URL: urlDummySensor))
     }
 
     override func didReceiveMemoryWarning() {
