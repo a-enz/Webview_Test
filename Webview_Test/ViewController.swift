@@ -20,22 +20,22 @@ class ViewController: UIViewController {
         
         print("displaying a basic WebView")
         
-        print("Home directory  \(NSBundle.mainBundle().resourcePath!)")
+        print("NSBundle directory  \(NSBundle.mainBundle().resourcePath!)")
+        print("NSHomeDirectory \(NSHomeDirectory())")
         
-        var html: String
-        html = "<br /><h2>WebView Hello World</h2>"
+        //var html: String
+        //html = "<br /><h2>WebView Hello World</h2>"
         //load html directly as a string
         //axonWebView.loadHTMLString(html, baseURL: nil)
         
-        let urlDummySensor: NSURL = NSURL(fileURLWithPath: "http://http://localhost:8080/nervousnet-api/raw-sensor-data/:sensor")
-        axonWebView.loadRequest(NSURLRequest(URL: urlDummySensor))
+        
+        //local axon url: http://localhost:8080/nervousnet-axons/axon-one/axon.html
+        
+        let url = NSURL(string: "http://localhost:8080/nervousnet-axons/axon-one/axon.html")
+        
+        axonWebView.loadRequest(NSURLRequest(URL: url!))
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 

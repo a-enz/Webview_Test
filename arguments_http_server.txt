@@ -1,0 +1,17 @@
+pros:
+- easy implementation (good for POC)
+- makes 3rd party development easy (html & javascript)
+- lewin: performance is better than talking directly to the server
+
+
+
+cons:
+- running the server all the time even when not needed
+- security issue: data can be accessed through http requests by anyone -> need to at least build authorization -> currently used server engine does not have it?
+-
+
+alternatives:
+- app extension (probably too simplistic)
+- plugin architecture (selfmade or apache cordova?) 
+  - CFPlugin (available for swift)
+- https web server (https required starting 2017: https://techcrunch.com/2016/06/14/apple-will-require-https-connections-for-ios-apps-by-the-end-of-2016/)

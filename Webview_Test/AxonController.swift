@@ -10,13 +10,14 @@ import Foundation
 import Swifter
 
 class AxonController {
+    let axonResourceDir = "/Users/aenz/COSS/Webview_Test/Webview_Test/Assets/axon-resources/"
+    let axonDir = "/Users/aenz/COSS/Webview_Test/Webview_Test/Assets"
+
     
     var pseudoSensor: Int = 0
     
     var server = HttpServer()
-    
-    //let axonResourceDir = "\(NSBundle.mainBundle().resourcePath!)/Assets/axon-resources/"
-    let axonDir = "\(NSHomeDirectory())/Documents/nervousnet-installed-axons/"
+    var dataLayer = NervousnetRemote()
     
     init(){
         startAxonHTTPServer()
@@ -42,7 +43,6 @@ class AxonController {
     
     
     func mapAxonHTTPServerRoutes(){
-        
         // route to list available services
         self.server["/"] = { r in
             var listPage = "<div style='font-family: Helvetica; font-size: 12pt'>Available nervousnet services on this device:<br><ul>"
@@ -54,10 +54,12 @@ class AxonController {
             listPage += "</ul></div>"
             return .OK(.Html(listPage))
         }
+    
         
         
+
         // route to get static resources like JS, HTML or assets provided by nervous
-        /*
+
         self.server.GET["/nervousnet-axon-resources/:resource"] = { r in
             if let filename = r.params[":resource"] {
                 return self.returnRawResponse("\(self.axonResourceDir)\(filename)");
@@ -65,22 +67,23 @@ class AxonController {
             return .NotFound
             
         }
-        */
-        
+
+
         
         // route to get any axon resource
         self.server.GET["/nervousnet-axons/:axonname/:resource"] = { r in
             if let filename = r.params[":resource"], axonname = r.params[":axonname"] {
-                return self.returnRawResponse("\(self.axonDir)/\(axonname)/\(axonname)-master/\(filename)");
+                return self.returnRawResponse("\(self.axonDir)/\(axonname)-master/\(filename)");
             }
             return .NotFound
             
         }
         
-        
-        
+
+
         
         // route to get any axon resource
+        // for now a pseudo sensor that returns a counter
         self.server.GET["/nervousnet-api/raw-sensor-data/:sensor/"] = { r in
             
             if let _ = r.params[":sensor"] {
@@ -99,6 +102,24 @@ class AxonController {
             return .NotFound
             
         }
+        
+        self.server.GET["/nervousnet-api/historical_data/:sensor/:start/:end"] = { r in
+            
+            if let sensor: String = r.params[":sensor"],
+            startTime: Double = r.params[":start"],
+            endTime: Double = r.params[":end"] {
+                
+                //do some input checking: times should be in some format - probably milliseconds and not newer
+                //than today?
+                
+                
+            }
+            
+            return .NotFound
+            
+        }
+        
+        //EXTENDED FUNCTIONALITY
         
         
     }

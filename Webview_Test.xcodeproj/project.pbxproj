@@ -16,6 +16,8 @@
 		386FDDEB1DC0E24300ED598E /* Webview_TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386FDDEA1DC0E24300ED598E /* Webview_TestTests.swift */; };
 		386FDDF61DC0E24300ED598E /* Webview_TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386FDDF51DC0E24300ED598E /* Webview_TestUITests.swift */; };
 		38831BEC1DC21B5F0098C8CA /* swifter-stable in Frameworks */ = {isa = PBXBuildFile; fileRef = 38831BEB1DC21B5F0098C8CA /* swifter-stable */; };
+		38DFA05B1DCB9AAF002DD774 /* SensorReading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DFA05A1DCB9AAF002DD774 /* SensorReading.swift */; };
+		38DFA05D1DCB9ABD002DD774 /* NervousnetRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DFA05C1DCB9ABD002DD774 /* NervousnetRemote.swift */; };
 		98151BF2528731556693C38C /* Pods_Webview_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B73743EBF2B51D905384ACB /* Pods_Webview_Test.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +56,8 @@
 		386FDDF51DC0E24300ED598E /* Webview_TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webview_TestUITests.swift; sourceTree = "<group>"; };
 		386FDDF71DC0E24300ED598E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38831BEB1DC21B5F0098C8CA /* swifter-stable */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "swifter-stable"; sourceTree = "<group>"; };
+		38DFA05A1DCB9AAF002DD774 /* SensorReading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorReading.swift; sourceTree = "<group>"; };
+		38DFA05C1DCB9ABD002DD774 /* NervousnetRemote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NervousnetRemote.swift; sourceTree = "<group>"; };
 		8962FDE5FCF4C974C8FAB041 /* Pods-Webview_Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Webview_Test.release.xcconfig"; path = "Pods/Target Support Files/Pods-Webview_Test/Pods-Webview_Test.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +114,7 @@
 		386FDDD41DC0E24300ED598E /* Webview_Test */ = {
 			isa = PBXGroup;
 			children = (
+				38DFA0591DCB9AA0002DD774 /* SensorHandling */,
 				386FDDD51DC0E24300ED598E /* AppDelegate.swift */,
 				386FDDD71DC0E24300ED598E /* ViewController.swift */,
 				385A632E1DC24E7400E93B10 /* AxonController.swift */,
@@ -137,6 +142,15 @@
 				386FDDF71DC0E24300ED598E /* Info.plist */,
 			);
 			path = Webview_TestUITests;
+			sourceTree = "<group>";
+		};
+		38DFA0591DCB9AA0002DD774 /* SensorHandling */ = {
+			isa = PBXGroup;
+			children = (
+				38DFA05A1DCB9AAF002DD774 /* SensorReading.swift */,
+				38DFA05C1DCB9ABD002DD774 /* NervousnetRemote.swift */,
+			);
+			name = SensorHandling;
 			sourceTree = "<group>";
 		};
 		598CCB7B616E2ABEBF5957CE /* Frameworks */ = {
@@ -340,6 +354,8 @@
 			files = (
 				385A632F1DC24E7400E93B10 /* AxonController.swift in Sources */,
 				386FDDD81DC0E24300ED598E /* ViewController.swift in Sources */,
+				38DFA05B1DCB9AAF002DD774 /* SensorReading.swift in Sources */,
+				38DFA05D1DCB9ABD002DD774 /* NervousnetRemote.swift in Sources */,
 				386FDDD61DC0E24300ED598E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
