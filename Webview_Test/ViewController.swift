@@ -20,7 +20,6 @@ class ViewController: UIViewController {
         
         print("displaying a basic WebView")
         
-        print("NSBundle directory  \(NSBundle.mainBundle().resourcePath!)")
         print("NSHomeDirectory \(NSHomeDirectory())")
         
         //var html: String
@@ -31,9 +30,9 @@ class ViewController: UIViewController {
         
         //local axon url: http://localhost:8080/nervousnet-axons/axon-one/axon.html
         
-        let url = NSURL(string: "http://localhost:8080/nervousnet-axons/axon-one/axon.html")
+        let url = URL(string: "http://localhost:8080/nervousnet-axons/axon-one/axon.html")
         
-        axonWebView.loadRequest(NSURLRequest(URL: url!))
+        axonWebView.loadRequest(URLRequest(url: url!))
         
     }
 

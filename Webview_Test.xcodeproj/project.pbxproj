@@ -241,13 +241,17 @@
 				TargetAttributes = {
 					386FDDD11DC0E24300ED598E = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 5R8S596684;
+						LastSwiftMigration = 0810;
 					};
 					386FDDE51DC0E24300ED598E = {
 						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0810;
 						TestTargetID = 386FDDD11DC0E24300ED598E;
 					};
 					386FDDF01DC0E24300ED598E = {
 						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0810;
 						TestTargetID = 386FDDD11DC0E24300ED598E;
 					};
 				};
@@ -499,10 +503,12 @@
 			baseConfigurationReference = 1BBDF0C8689D096CE6E01E5C /* Pods-Webview_Test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5R8S596684;
 				INFOPLIST_FILE = Webview_Test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "COSS.Webview-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -511,10 +517,12 @@
 			baseConfigurationReference = 8962FDE5FCF4C974C8FAB041 /* Pods-Webview_Test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5R8S596684;
 				INFOPLIST_FILE = Webview_Test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "COSS.Webview-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -526,6 +534,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "COSS.Webview-TestTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Webview_Test.app/Webview_Test";
 			};
 			name = Debug;
@@ -538,6 +547,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "COSS.Webview-TestTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Webview_Test.app/Webview_Test";
 			};
 			name = Release;
@@ -549,6 +559,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "COSS.Webview-TestUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Webview_Test;
 				USES_XCTRUNNER = YES;
 			};
@@ -561,6 +572,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "COSS.Webview-TestUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Webview_Test;
 				USES_XCTRUNNER = YES;
 			};

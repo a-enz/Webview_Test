@@ -17,7 +17,6 @@ class AxonController {
     var pseudoSensor: Int = 0
     
     var server = HttpServer()
-    var dataLayer = NervousnetRemote()
     
     init(){
         startAxonHTTPServer()
@@ -52,7 +51,7 @@ class AxonController {
                 }
             }
             listPage += "</ul></div>"
-            return .OK(.Html(listPage))
+            return .ok(.html(listPage))
         }
     
         
@@ -62,9 +61,9 @@ class AxonController {
 
         self.server.GET["/nervousnet-axon-resources/:resource"] = { r in
             if let filename = r.params[":resource"] {
-                return self.returnRawResponse("\(self.axonResourceDir)\(filename)");
+                return self.returnRawResponse(fileURL: "\(self.axonResourceDir)\(filename)");
             }
-            return .NotFound
+            return .notFound
             
         }
 
@@ -72,10 +71,10 @@ class AxonController {
         
         // route to get any axon resource
         self.server.GET["/nervousnet-axons/:axonname/:resource"] = { r in
-            if let filename = r.params[":resource"], axonname = r.params[":axonname"] {
-                return self.returnRawResponse("\(self.axonDir)/\(axonname)-master/\(filename)");
+            if let filename = r.params[":resource"], let axonname = r.params[":axonname"] {
+                return self.returnRawResponse(fileURL: "\(self.axonDir)/\(axonname)-master/\(filename)");
             }
-            return .NotFound
+            return .notFound
             
         }
         
@@ -88,26 +87,27 @@ class AxonController {
             
             if let _ = r.params[":sensor"] {
                 
-                let data =  self.pseudoSensor++
+                self.pseudoSensor += 1
+                let data =  self.pseudoSensor
                 
                 
                 print(data)
                 let jsonObject: NSDictionary = ["data": data]
-                return .OK(.Json(jsonObject))
+                return .ok(.json(jsonObject))
 
                 
                 
             }
             
-            return .NotFound
+            return .notFound
             
         }
         
         self.server.GET["/nervousnet-api/historical_data/:sensor/:start/:end"] = { r in
             
-            if let sensor: String = r.params[":sensor"],
-            startTime: Double = r.params[":start"],
-            endTime: Double = r.params[":end"] {
+            if let sensor = r.params[":sensor"],
+            let startTime = r.params[":start"],
+            let endTime = r.params[":end"] {
                 
                 //do some input checking: times should be in some format - probably milliseconds and not newer
                 //than today?
@@ -115,7 +115,7 @@ class AxonController {
                 
             }
             
-            return .NotFound
+            return .notFound
             
         }
         
@@ -130,14 +130,15 @@ class AxonController {
         if let contentsOfFile = NSData(contentsOfFile: fileURL) {
             print("getting \(fileURL)")
             
-            var contentsOfFileBytes = [UInt8](count: contentsOfFile.length, repeatedValue: 0)
+            var contentsOfFileBytes = [UInt8](repeating: 0, count: contentsOfFile.length)
             contentsOfFile.getBytes(&contentsOfFileBytes, length: contentsOfFile.length)
-            
-            return HttpResponse.RAW(200, "OK", nil, { $0.write(contentsOfFileBytes) })
+
+            return HttpResponse.raw(200, "OK", nil, {try $0.write(contentsOfFileBytes)})
+
         }
         
         print("resource at \(fileURL) not found")
-        return .NotFound
+        return .notFound
         
     }
     
